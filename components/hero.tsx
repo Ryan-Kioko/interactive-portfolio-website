@@ -25,19 +25,19 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,#376e6f55,transparent_60%),radial-gradient(ellipse_at_10%_90%,#2e151b,transparent_55%)]"
       />
-      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-8 px-5 lg:grid-cols-2">
+      <div className="relative mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)] items-center gap-8 px-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col gap-6"
+          className="flex min-w-0 flex-col gap-6"
         >
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-rose">
             {'// Nairobi → Bradford → AI Engineering'}
           </p>
           <h1
             id="hero-title"
-            className="text-balance text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl"
+            className="text-balance break-words text-4xl font-bold sm:text-5xl leading-[1.05] tracking-tight md:text-7xl"
           >
             Ryan Kioko
             <span className="block text-muted-foreground">builds AI that</span>
@@ -83,7 +83,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative h-[420px] w-full md:h-[560px]"
+          className="relative h-[340px] w-full min-w-0 overflow-hidden sm:h-[420px] md:h-[560px]"
         >
           <NeuralScene />
           <p className="absolute bottom-2 right-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
