@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, useScroll, useSpring } from 'motion/react'
+import { HireMeDialog } from '@/components/hire-me-dialog'
 
 const links = [
   { href: '#journey', label: 'Journey' },
@@ -35,12 +36,7 @@ export function SiteNav() {
             </li>
           ))}
         </ul>
-        <a
-          href="#contact"
-          className="rounded-full bg-rose px-4 py-1.5 text-sm font-medium text-wine transition-opacity hover:opacity-90"
-        >
-          Hire me
-        </a>
+        <HireMeDialog />
       </nav>
       <motion.div
         aria-hidden

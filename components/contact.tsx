@@ -1,5 +1,6 @@
 import { FolderGit2, Mail, Phone } from 'lucide-react'
 import { profile } from '@/lib/portfolio-data'
+import { HireMeDialog } from '@/components/hire-me-dialog'
 
 export function Contact() {
   const items = [
@@ -23,6 +24,9 @@ export function Contact() {
         <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground">
           {"I'm looking for an AI engineering internship where I can apply ML to real-world problems — especially in Nairobi's growing tech ecosystem."}
         </p>
+        <div className="mt-8 flex justify-center">
+          <HireMeDialog label="Send me a message" className="px-6 py-3 text-base" />
+        </div>
         <ul className="mt-10 grid gap-3 sm:grid-cols-2">
           {items.map((it) => (
             <li key={it.label + it.value}>
